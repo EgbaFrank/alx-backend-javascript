@@ -1,6 +1,6 @@
 export default function cleanSet(set, startString) {
   if (!startString || !set.size) {
-    return '';
+    return ' ';
   }
 
   const filteredValues = [...set].filter((val) => val.startsWith(startString));
