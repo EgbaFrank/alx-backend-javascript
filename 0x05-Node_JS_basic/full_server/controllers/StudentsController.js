@@ -15,7 +15,7 @@ class StudentsController {
       })
       .catch((err) => {
         console.error(err);
-        response.status(500).send(`This is the list of our students\n${err.message}`);
+        response.status(500).send(err.message);
       });
   }
 
