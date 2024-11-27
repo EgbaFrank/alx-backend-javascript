@@ -4,6 +4,11 @@ const fs = require('fs');
 const app = express();
 const port = 1245;
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`); // Log HTTP method and URL
+  next(); // Pass control to the next middleware/route
+});
+
 function countStudents(path) {
   return new Promise((resolve, reject) => {
     if (!path) {
@@ -49,7 +54,8 @@ app.get('/students', (req, res) => {
       res.send(result);
     })
     .catch((error) => {
-      res.send(error.message);
+      const reply = `This is the list of our students\n${error.message}`;
+      res.send(reply);
     });
 });
 
