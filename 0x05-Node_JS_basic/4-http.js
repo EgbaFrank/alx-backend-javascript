@@ -1,5 +1,4 @@
-// create a small HTTP server
-const { createServer } = require('node:http');
+const { createServer } = require('http');
 
 const PORT = 1245;
 const HOST = '0.0.0.0';

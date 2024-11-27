@@ -1,6 +1,6 @@
 // create a small HTTP server
-const { createServer } = require('node:http');
-const fs = require('node:fs');
+const { createServer } = require('http');
+const fs = require('fs');
 
 function countStudents(path) {
   return new Promise((resolve, reject) => {
