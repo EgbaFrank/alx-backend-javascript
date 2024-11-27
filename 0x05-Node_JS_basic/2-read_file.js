@@ -1,4 +1,3 @@
-// Reading a file synchronously
 const fs = require('node:fs');
 
 function countStudents(path) {
